@@ -369,19 +369,20 @@ class BirinciKolon extends ConsumerWidget {
 
 
     for(int i =0 ; i<6 ; i++)
-    Expanded(
-    child: ElevatedButton(
-    onPressed: () {},
-    style: ElevatedButton.styleFrom(
-    shape: const CircleBorder(),
-    padding: const EdgeInsets.all(15),
-    backgroundColor: Colors.blue, // <-- Button color
-    foregroundColor: Colors.red, // <-- Splash color
-    ),
-    child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16),), // Seçmediysek boş kalsın
+      Expanded(
+        child: Container(
+          child: Center(
+              child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16,color: Colors.red),)
+          ), // Seçmediysek boş kalsın
+            decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.blue,
+          ),
+          padding: EdgeInsets.all(15.0),
 
-    ),
-    ),
+
+        ),
+      ),
 
 
     ],
@@ -410,15 +411,16 @@ class IkinciKolon extends ConsumerWidget {
 
         for(int i =6 ; i<12 ; i++)
           Expanded(
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(15),
-                backgroundColor: Colors.blue, // <-- Button color
-                foregroundColor: Colors.red, // <-- Splash color
+            child: Container(
+              child: Center(
+                  child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16,color: Colors.red),)
+              ), // Seçmediysek boş kalsın
+                decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
               ),
-              child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16),),
+              padding: EdgeInsets.all(15.0),
+
 
             ),
           ),
@@ -449,15 +451,16 @@ class UcuncuKolon extends ConsumerWidget {
 
         for(int i =12 ; i<18 ; i++)
           Expanded(
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(15),
-                backgroundColor: Colors.blue, // <-- Button color
-                foregroundColor: Colors.red, // <-- Splash color
+            child: Container(
+              child: Center(
+                  child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16,color: Colors.red),)
+              ), // Seçmediysek boş kalsın
+                decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
               ),
-              child: Text(kolon.length< i+1 ? '' : '${kolon[i]}',style: const TextStyle(fontSize: 16),), // Daha sayı seçilmediyse kutucuk boş kalsın
+              padding: EdgeInsets.all(15.0),
+
 
             ),
           ),
